@@ -23,7 +23,7 @@ with col3:
     Machine Learning Engineer<br>
     Warsaw, Poland :flag-pl:
     <br>https://www.linkedin.com/in/robertkwiatkowski01/
-    """,  unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
 st.write("""
 I'm a ML/DS with over 10 years of experience in programming and with a background in the aerospace engineering.
@@ -45,8 +45,10 @@ Languages:
 * :flag-fr: French - level A1
 """)
 
-st.write("""---""")
-st.write("Experience")
+col1, col2, col3 = st.columns(3)
+col1.write("""---""")
+col2.markdown("<h3 style='text-align: center'>Experience</h3>", unsafe_allow_html=True)
+col3.write("""---""")
 
 with st.expander("01-2023 - currently, **Orange**, ML Engineer, Poland :flag-pl:"):
     st.write("""
@@ -107,9 +109,13 @@ with st.expander("03-2011 - 12-2013, **Warsaw University of Technology**, R&D En
         * Mesh preparation in Hypermesh and Gambit,
         * Toolset: Python, ANSYS Workbench, ANSYS APDL, ANSYS FLUENT, CATIA V5, UG NX, Gambit, Hypermesh""")
 
-st.write("---")
-st.write("Education")
+col1, col2, col3 = st.columns(3)
+col1.write("""---""")
+col2.markdown("<h3 style='text-align: center'>Education</h3>", unsafe_allow_html=True)
+col3.write("""---""")
 
-with st.expander("10-2005 - 03-2011, Warsaw University of Technology, Master of Science, Poland :flag-pl:"):
-    st.write("""Warsaw University of Technology, Faculty of Power and Aeronautical Engineering.""")
-
+with st.expander("10-2005 - 03-2011, **Warsaw University of Technology**, Master of Science, Poland :flag-pl:"):
+    st.write("""Warsaw University of Technology, Faculty of Power and **Aeronautical Engineering**.  
+    **Specialisation**: Aerospace Propulsion  
+    **Thesis title**: *'Numerical Heat Transfer Analysis of High-Load Turbine Blades'*
+    """)
