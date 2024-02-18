@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(layout="centered")
 
-st.title("Welcome to my personal webpage!")
+st.title("ROBERT KWIATKOWSKI personal webpage")
 
 col1, col2, col3 = st.columns([1, 1, 2])
 
@@ -21,28 +21,35 @@ with col3:
     st.write("""
     Robert<br>Kwiatkowski<br>
     Machine Learning Engineer<br>
-    Warsaw, Poland :flag-pl:
-    <br>https://www.linkedin.com/in/robertkwiatkowski01/
+    Warsaw, Poland :flag-pl:<br>
+    https://www.linkedin.com/in/robertkwiatkowski01/
     """, unsafe_allow_html=True)
 
 st.write("""
 I'm a ML/DS with over 10 years of experience in programming and with a background in the aerospace engineering.
 My expertise is in Data Science and Machine Learning, Cloud Computing and MLOps
 
-My devset:
-* Python
+Expertise:
+* Data Science, Machine Learning
+* Data Engineering
+* Cloud Architecture
+* Systems Engineering
+* MLOps
+
+Devset:
+* Python, Go
 * SQL and noSQL databases (Redis, MongoDB)
 * Docker, Kubernetes, Kubeflow, MLflow, Airflow
 * Apache Spark (PySpark)
-* Cloud platforms: GCP (Vertex, BigQuery, Dataproc, Dataflow, Pubsub), AWS
-* Power BI
+* Cloud platforms: GCP, AWS
+* Backend: FastAPI, Django
 * Basics of frontend: HTML, CSS and JavaScript
 
 Languages:
-* :gb: English - level C1
-* :flag-de: German - level B2
-* :flag-es: Spanish - level B1
-* :flag-fr: French - level A1
+* :gb: | English - level C1
+* :flag-de: | German - level B2
+* :flag-es: | Spanish - level B1
+* :flag-fr: | French - level A1
 """)
 
 col1, col2, col3 = st.columns(3)
@@ -50,7 +57,7 @@ col1.write("""---""")
 col2.markdown("<h3 style='text-align: center'>Experience</h3>", unsafe_allow_html=True)
 col3.write("""---""")
 
-with st.expander("01-2023 - currently, **Orange**, ML Engineer, Poland :flag-pl:"):
+with st.expander("01-2022 - currently, **Orange**, Tech Lead/ ML Engineer, Poland :flag-pl:"):
     st.write("""
     Orange is a multinational telecom corporation with HQ in *Paris, France* :flag-fr:  
     * Working in Data & AI International Team
@@ -85,7 +92,7 @@ with st.expander("09-2014 - 12-2021, **Rolls-Royce**, Designer/Data Analyst, Ger
         * Preparing subsystem technical documentation, e.g.: General Arrangements, reports, BOMs
         * Toolset: Python, NX, DOORS, SAP, Qualica, Teamcenter, ANSYS, Isight,""")
 
-with st.expander("08-2011 - 08-2024, **ETC-PZL Aerospace Industries**, Design Engineer, Poland :flag-pl:"):
+with st.expander("08-2011 - 08-2014, **ETC-PZL Aerospace Industries**, Design Engineer, Poland :flag-pl:"):
     st.write("""ETC-PZL Aerospace Industries is a multinational engineering delivering advanced simulators mostly for 
     the aerospace industry but also for police and military""")
     st.write("""
@@ -119,3 +126,18 @@ with st.expander("10-2005 - 03-2011, **Warsaw University of Technology**, Master
     **Specialisation**: Aerospace Propulsion  
     **Thesis title**: *'Numerical Heat Transfer Analysis of High-Load Turbine Blades'*
     """)
+
+
+col1, col2, col3 = st.columns(3)
+col1.write("""---""")
+col2.markdown("<h3 style='text-align: center'>Articles</h3>", unsafe_allow_html=True)
+col3.write("""---""")
+
+st.write("""
+In my free time I write articles about programming and Machine Learning. Most of them are published on
+Towards Data Science.
+* [Gradient Descent Algorithm — a deep dive](https://towardsdatascience.com/gradient-descent-algorithm-a-deep-dive-cf04e8115f21)
+* [Monte Carlo Simulation — a practical guide](https://towardsdatascience.com/monte-carlo-simulation-a-practical-guide-85da45597f0e)
+* [Batch, Mini-Batch and Stochastic Gradient Descent for Linear Regression](https://towardsdatascience.com/batch-mini-batch-and-stochastic-gradient-descent-for-linear-regression-9fe4eefa637c)
+* [Performing Linear Regression Using the Normal Equation](https://towardsdatascience.com/performing-linear-regression-using-the-normal-equation-6372ed3c57)
+""")
