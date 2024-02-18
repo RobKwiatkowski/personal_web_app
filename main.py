@@ -4,6 +4,8 @@ st.set_page_config(layout="centered")
 
 st.title("ROBERT KWIATKOWSKI personal webpage")
 
+st.sidebar.success("Welcome page")
+
 col1, col2, col3 = st.columns([1, 1, 2])
 
 with col1:
