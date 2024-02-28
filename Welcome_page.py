@@ -8,7 +8,7 @@ st.title("Welcome to my personal webpage")
 st.write("""This is a space where you can find some info about myself, my interests and personal projects.
 Below some basic info about me.""")
 
-col1, col2, col3 = st.columns([1, 1, 2])
+col1, col2, col3 = st.columns([0.25, 0.15, 0.6])
 
 with col1:
     st.image("ML Engineer.png")
@@ -25,13 +25,13 @@ with col3:
     st.write("""
     Robert<br>Kwiatkowski<br>
     Machine Learning Engineer<br>
-    Warsaw, Poland :flag-pl:<br>
+    Warsaw, Poland
     https://www.linkedin.com/in/robertkwiatkowski01/
     """, unsafe_allow_html=True)
 
 st.write("""
 I'm a ML/DS with over 10 years of experience in programming and with a background in the aerospace engineering.
-My expertise is in Data Science and Machine Learning, Cloud Computing and MLOps
+My expertise is in Data Science and Machine Learning, Cloud Computing and MLOps.
 
 Expertise:
 * Data Science, Machine Learning
@@ -50,7 +50,7 @@ Devset:
 * Basics of frontend: HTML, CSS and JavaScript
 
 Languages:
-* :gb: | English - level C1
+* :flag-gb: | English - level C1
 * :flag-de: | German - level B2
 * :flag-es: | Spanish - level B1
 * :flag-fr: | French - level A1
