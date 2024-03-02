@@ -145,3 +145,12 @@ Towards Data Science.
 * [Batch, Mini-Batch and Stochastic Gradient Descent for Linear Regression](https://towardsdatascience.com/batch-mini-batch-and-stochastic-gradient-descent-for-linear-regression-9fe4eefa637c)
 * [Performing Linear Regression Using the Normal Equation](https://towardsdatascience.com/performing-linear-regression-using-the-normal-equation-6372ed3c57)
 """)
+
+col1, col2, col3 = st.columns(3)
+col1.write("""---""")
+col2.markdown("<h3 style='text-align: center'>Talks</h3>", unsafe_allow_html=True)
+col3.write("""---""")
+
+st.write("""
+* [Machine Learning Week Europe](https://machinelearningweek.eu/agenda/), Berlin, Nov 2023, "Anomaly Detection in Telco Network at Orange"
+""")
