@@ -20,13 +20,15 @@ with st.form("my_form"):
 
     submitted = st.form_submit_button("Submit")
 
+    time_step = 0.1
     if submitted:
         item = main.Object(mass=mass, diameter=diameter, drag_c=drag_coefficient)
-        results, flags = item.drop(drop_altitude=drop_altitude, time_step=0.05)
+        results, flags = item.drop(drop_altitude=drop_altitude, time_step=time_step)
         pd_results = pd.DataFrame(results)
-        #st.dataframe(pd_results)
+        pd_results["acceleration"] = (pd_results["velocity"].shift(1)-pd_results["velocity"])/time_step
 
         st.write(f'Fall time is: {results["time"][-1]:.1f} s',)
+        #st.dataframe(pd_results)
 
         fig, ax = plt.subplots(1, 2, figsize=(12, 10))
         ax[0].plot(pd_results["velocity"], pd_results["altitude"])
@@ -34,10 +36,9 @@ with st.form("my_form"):
         ax[0].set_ylabel("height [m]")
         ax[0].set_xlim(0)
         ax[0].set_ylim(0)
-        ax[1].plot(pd_results["time"], pd_results["altitude"])
-        ax[1].set_xlabel("velocity [m/s]")
+        ax[1].plot(pd_results["acceleration"], pd_results["altitude"])
+        ax[1].set_xlabel("acceleration [m/s2]")
         ax[1].set_ylabel("height [m]")
-        ax[1].set_xlim(0)
         ax[1].set_ylim(0)
         st.pyplot(fig)
 
