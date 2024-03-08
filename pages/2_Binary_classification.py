@@ -6,7 +6,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score, recall_score
-from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
+from sklearn.metrics import (
+    ConfusionMatrixDisplay,
+    RocCurveDisplay,
+    PrecisionRecallDisplay,
+)
 from sklearn.preprocessing import LabelEncoder
 
 pd.set_option("mode.copy_on_write", True)
@@ -95,7 +99,11 @@ def run_model(model):
 
 st.title("Binary Classification Web App")
 
-dataset_id = st.radio("Choose a dataset", ["Mushrooms", "Phishing Websites"], help="Data Sets from UCI ML repository")
+dataset_id = st.radio(
+    "Choose a dataset",
+    ["Mushrooms", "Phishing Websites"],
+    help="Data Sets from UCI ML repository",
+)
 df_raw = None
 target_col = None
 if dataset_id == "Mushrooms":
@@ -119,7 +127,10 @@ X_train, X_test, y_train, y_test = split_data(df_encoded, target_col)
 
 st.subheader("Choose classifier")
 classifier = st.selectbox("Classifier", options=["SVM", "Random Forest"])
-metrics = st.multiselect("Choose evaluation metrics", ["Confusion Matrix", "ROC curve", "Precision-Recall Curve"])
+metrics = st.multiselect(
+    "Choose evaluation metrics",
+    ["Confusion Matrix", "ROC curve", "Precision-Recall Curve"],
+)
 
 if classifier == "SVM":
     st.subheader("Select Hyperparameters")
@@ -133,12 +144,15 @@ if classifier == "SVM":
 
 if classifier == "Random Forest":
     st.subheader("Select Hyperparameters")
-    user_n_estimators = st.number_input(label="Number of estimators", min_value=1, max_value=1000, value=100)
-    user_max_depth = st.number_input(label="Max_depth", min_value=1, max_value=10, value=2)
+    user_n_estimators = st.number_input(
+        label="Number of estimators", min_value=1, max_value=1000, value=100
+    )
+    user_max_depth = st.number_input(
+        label="Max_depth", min_value=1, max_value=10, value=2
+    )
 
     if st.button("Classify", key="classify"):
-        clf = RandomForestClassifier(n_estimators=user_n_estimators, max_depth=user_max_depth, random_state=0)
+        clf = RandomForestClassifier(
+            n_estimators=user_n_estimators, max_depth=user_max_depth, random_state=0
+        )
         run_model(clf)
-
-
-
