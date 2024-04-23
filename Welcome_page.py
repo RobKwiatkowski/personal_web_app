@@ -31,7 +31,7 @@ with col3:
         """
     Robert<br>Kwiatkowski<br>
     Machine Learning Engineer<br>
-    Warsaw, Poland
+    Warsaw, Poland<br>
     https://www.linkedin.com/in/robertkwiatkowski01/
     """,
         unsafe_allow_html=True,
@@ -71,7 +71,7 @@ col2.markdown("<h3 style='text-align: center'>Experience</h3>", unsafe_allow_htm
 col3.write("""---""")
 
 with st.expander(
-    "01-2022 - currently, **Orange**, Tech Lead/ ML Engineer, Poland :flag-pl:"
+    "01/2022 - currently, **Orange**, Tech Lead/ ML Engineer, Poland :flag-pl:"
 ):
     st.write(
         """
@@ -87,13 +87,13 @@ with st.expander(
     )
 
 with st.expander(
-    "09-2014 - 12-2021, **Rolls-Royce**, Designer/Data Analyst, Germany :flag-de:"
+    "09/2014 - 12/2021, **Rolls-Royce**, Designer/Data Analyst, Germany :flag-de:"
 ):
     st.write(
         """Rolls-Royce is a multinational engineering aerospace :airplane: company developing jet engines. 
              Its HQ is in *Derby, UK* :uk:"""
     )
-    if st.checkbox("04-2019 - 12-2021, Turbines subsystem"):
+    if st.checkbox("04/2019 - 12/2021, Turbines subsystem"):
         st.write(
             """
         * Optimising subsystem's architecture by integration and analysis of data from multiple sources
@@ -105,7 +105,7 @@ with st.expander(
         * Supporting NPI and Fleet design activities
         * Carrying out Root Cause Investigations for Fleet and NPI projects"""
         )
-    if st.checkbox("09-2014 - 03-2019, Compressor subsystem"):
+    if st.checkbox("09/2014 - 03/2019, Compressor subsystem"):
         st.write(
             """
         * Working in the "Future Projects and Technologies" team
@@ -120,7 +120,7 @@ with st.expander(
         )
 
 with st.expander(
-    "08-2011 - 08-2014, **ETC-PZL Aerospace Industries**, Design Engineer, Poland :flag-pl:"
+    "08/2011 - 08/2014, **ETC-PZL Aerospace Industries**, Design Engineer, Poland :flag-pl:"
 ):
     st.write(
         """ETC-PZL Aerospace Industries is a multinational engineering delivering advanced simulators mostly for 
@@ -139,7 +139,7 @@ with st.expander(
     )
 
 with st.expander(
-    "03-2011 - 12-2013, **Warsaw University of Technology**, R&D Engineer, Poland :flag-pl:"
+    "03/2011 - 12/2013, **Warsaw University of Technology**, R&D Engineer, Poland :flag-pl:"
 ):
     st.write(
         """Warsaw University of Technology, Faculty of Power and Aeronautical Engineering."""
@@ -161,11 +161,12 @@ col2.markdown("<h3 style='text-align: center'>Education</h3>", unsafe_allow_html
 col3.write("""---""")
 
 with st.expander(
-    "10-2005 - 03-2011, **Warsaw University of Technology**, Master of Science, Poland :flag-pl:"
+    "10/2005 - 03/2011, **Warsaw University of Technology**, Master of Science, Poland :flag-pl:"
 ):
-    st.write(
-        """Warsaw University of Technology, Faculty of Power and **Aeronautical Engineering**.  
-    **Specialisation**: Aerospace Propulsion  
+    st.markdown(
+        """
+    Faculty of Power and **Aeronautical Engineering**  
+    **Specialisation**: Aerospace Propulsion ✈  
     **Thesis title**: *'Numerical Heat Transfer Analysis of High-Load Turbine Blades'*
     """
     )
@@ -182,6 +183,7 @@ In my free time I write articles about programming and Machine Learning. Most of
 Towards Data Science.
 * [Gradient Descent Algorithm — a deep dive](https://towardsdatascience.com/gradient-descent-algorithm-a-deep-dive-cf04e8115f21)
 * [Monte Carlo Simulation — a practical guide](https://towardsdatascience.com/monte-carlo-simulation-a-practical-guide-85da45597f0e)
+* [Mastering Clustering — DBSCAN](https://medium.com/@robertkwiatkowski01/mastering-clustering-dbscan-a880566704bc)
 * [Is Moore’s Law Dead? Dying? Or still Alive?](https://robertkwiatkowski01.medium.com/is-moores-law-dead-dying-or-still-alive-a931ad9475a9)
 * [Batch, Mini-Batch and Stochastic Gradient Descent for Linear Regression](https://towardsdatascience.com/batch-mini-batch-and-stochastic-gradient-descent-for-linear-regression-9fe4eefa637c)
 * [Performing Linear Regression Using the Normal Equation](https://towardsdatascience.com/performing-linear-regression-using-the-normal-equation-6372ed3c57)
